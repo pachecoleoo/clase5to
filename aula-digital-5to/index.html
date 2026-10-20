@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aula Lab: una experiencia interactiva de HTML, CSS y JavaScript para aprender desarrollo web." />
+  <title>Aula Lab | Creamos el futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="header container">
+    <a class="logo" href="#inicio" aria-label="Aula Lab, inicio"><span class="logo-mark">✳</span> aula<span class="logo-light">lab</span><span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#laboratorio">Laboratorio</a>
+      <a href="#como-funciona">Cómo funciona</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo claro" title="Cambiar tema">☀ <span>Tema</span></button>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> PROYECTO WEB · 5.º AÑO</span>
+        <h1>Las ideas <span class="gradient-text">se convierten</span> en realidad<span class="period">.</span></h1>
+        <p>Una página puede ser mucho más que texto. Explorá el diseño, la programación y todo lo que podés crear con tres tecnologías.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#laboratorio">Probar el laboratorio <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta"><div class="avatar-stack" aria-hidden="true"><span>H</span><span>C</span><span>J</span></div><span>HTML + CSS + JavaScript<br /><strong>Sin frameworks. Solo código.</strong></span></div>
+      </div>
+      <div class="hero-visual" aria-label="Ejemplo de una ventana de código">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="code-window">
+          <div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span>mi-primera-web.js</span><span class="code-label">● EN VIVO</span></div>
+          <div class="code-body" aria-hidden="true">
+            <div><span class="line-no">01</span> <span class="purple">const</span> <span class="blue">idea</span> = <span class="green">'Tu próxima creación'</span>;</div>
+            <div><span class="line-no">02</span></div>
+            <div><span class="line-no">03</span> <span class="purple">function</span> <span class="yellow">crear</span>() {</div>
+            <div><span class="line-no">04</span> &nbsp; <span class="purple">return</span> <span class="green">'¡Hola, mundo! 🚀'</span>;</div>
+            <div><span class="line-no">05</span> }</div>
+            <div><span class="line-no">06</span></div>
+            <div><span class="line-no">07</span> <span class="blue">console</span>.<span class="yellow">log</span>(<span class="yellow">crear</span>());</div>
+          </div>
+          <div class="terminal"><span>➜</span> ¡Hola, mundo! 🚀 <span class="cursor"></span></div>
+        </div>
+        <div class="floating-chip chip-html">&lt;/&gt; <span>HTML</span></div>
+        <div class="floating-chip chip-css">✦ <span>CSS</span></div>
+        <div class="floating-chip chip-js">⚡ <span>JS</span></div>
+      </div>
+    </section>
+
+    <section class="projects container" id="proyectos">
+      <div class="section-intro"><div><span class="section-kicker">01 / EXPLORAR</span><h2>Las tres piezas de una web<span class="period">.</span></h2></div><p>Cada tecnología tiene un trabajo diferente. Juntas, hacen que un sitio cobre vida.</p></div>
+      <div class="cards">
+        <article class="tech-card html-card"><div class="card-head"><span class="tech-icon html-icon">&lt;/&gt;</span><span class="card-number">01</span></div><h3>HTML</h3><p>La <strong>estructura</strong>. Define títulos, imágenes, botones, secciones y todo el contenido.</p><div class="card-footer"><span>Contenido</span><span>↗</span></div></article>
+        <article class="tech-card css-card"><div class="card-head"><span class="tech-icon css-icon">✺</span><span class="card-number">02</span></div><h3>CSS</h3><p>El <strong>diseño</strong>. Controla colores, tipografías, tamaños, animaciones y distribución.</p><div class="card-footer"><span>Estilos</span><span>↗</span></div></article>
+        <article class="tech-card js-card"><div class="card-head"><span class="tech-icon js-icon">⚡</span><span class="card-number">03</span></div><h3>JavaScript</h3><p>La <strong>interacción</strong>. Hace que los botones respondan y que el contenido cambie.</p><div class="card-footer"><span>Lógica</span><span>↗</span></div></article>
+      </div>
+    </section>
+
+    <section class="lab-section" id="laboratorio"><div class="container lab-grid">
+      <div class="lab-copy"><span class="section-kicker">02 / EXPERIMENTAR</span><h2>Ahora te toca <span class="gradient-text">a vos.</span></h2><p>Ingresá tu nombre, elegí un color y creá un mensaje personalizado. Todo cambia al instante gracias a JavaScript.</p>
+        <form id="greetingForm" class="lab-form"><label for="nameInput">¿Cómo te llamás?</label><input id="nameInput" name="name" maxlength="25" placeholder="Escribí tu nombre..." autocomplete="given-name" required /><span class="field-caption">Elegí tu color favorito</span><div class="colors" role="group" aria-label="Color del mensaje"><button type="button" class="color-dot active" data-color="violet" aria-label="Violeta" aria-pressed="true"></button><button type="button" class="color-dot" data-color="cyan" aria-label="Celeste" aria-pressed="false"></button><button type="button" class="color-dot" data-color="orange" aria-label="Naranja" aria-pressed="false"></button><button type="button" class="color-dot" data-color="pink" aria-label="Rosa" aria-pressed="false"></button></div><button class="btn btn-primary form-submit" type="submit">Generar mi mensaje <span aria-hidden="true">✦</span></button></form>
+      </div>
+      <div class="preview-wrap"><div class="preview-top"><span><span class="preview-led"></span> VISTA PREVIA EN VIVO</span><span>resultado.html</span></div><div class="preview" id="preview"><div class="preview-emoji" id="previewEmoji">✨</div><span class="preview-tag">CREADO CON JAVASCRIPT</span><h3 id="previewTitle" aria-live="polite">¡Hola, creador/a!</h3><p id="previewDescription">Tu primera idea puede ser el inicio de algo increíble.</p><div class="preview-footer"><span>Diseñá. Programá. Sorprendé.</span><span>↗</span></div></div><p class="preview-hint">💡 Inspeccioná esta sección con F12 y descubrí cómo cambia el HTML.</p></div>
+    </div></section>
+
+    <section class="bottom-section container" id="como-funciona"><span class="section-kicker">03 / APRENDER</span><h2>¿Y cómo llega a internet<span class="period">?</span></h2><div class="steps"><div class="step"><span class="step-number">1</span><div><h3>Escribís el código</h3><p>Trabajás con tres archivos: HTML, CSS y JS.</p></div></div><div class="step"><span class="step-number">2</span><div><h3>Lo guardás en GitHub</h3><p>Un repositorio conserva tu proyecto y sus cambios.</p></div></div><div class="step"><span class="step-number">3</span><div><h3>Publicás tu sitio</h3><p>GitHub Pages puede mostrar esta web en internet gratis.</p></div></div></div><div class="final-banner"><div><span>EL PRÓXIMO PROYECTO</span><h3>Puede ser el tuyo<span class="period">.</span></h3></div><a href="#inicio" class="btn btn-secondary">Volver arriba ↑</a></div></section>
+  </main>
+  <footer class="container footer"><a class="logo" href="#inicio"><span class="logo-mark">✳</span> aula<span class="logo-light">lab</span><span class="logo-dot">.</span></a><span>Hecho con HTML, CSS y JavaScript · Clase de 5.º año</span><span>2026 © Aula Lab</span></footer>
+</body>
+</html>
